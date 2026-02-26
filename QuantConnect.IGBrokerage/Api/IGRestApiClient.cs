@@ -326,6 +326,7 @@ namespace QuantConnect.Brokerages.IG.Api
             var rateGate = isTradingRequest ? _tradingRateGate : _nonTradingRateGate;
             rateGate.WaitToProceed();
 
+            // TODO: missed 'using'
             var request = new HttpRequestMessage(method, _baseUrl + endpoint);
             request.Headers.Add("VERSION", version.ToString(CultureInfo.InvariantCulture));
 
