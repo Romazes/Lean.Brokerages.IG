@@ -45,6 +45,7 @@ namespace QuantConnect.Brokerages.IG
         private bool _isInitialized;
         private readonly Lock _lock = new();
 
+        // TODO: Not used parameters
         private string _apiUrl;
         private string _identifier;
         private string _password;
